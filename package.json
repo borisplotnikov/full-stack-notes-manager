@@ -12,15 +12,24 @@
     "build": "yarn workspace backend build && yarn workspace frontend build"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1",
-    "eslint": "^9.37.0",
-    "@eslint/js": "^9.37.0",
-    "eslint-plugin-import": "^2.32.0"
+    "concurrently": "9.1.0",
+    "eslint": "8.57.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "babel-eslint": "10.1.0"
+  },
+  "resolutions": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@testing-library/react": "14.3.0",
+    "eslint": "8.57.0"
   },
   "eslintConfig": {
     "extends": [
-      "eslint:recommended",
-      "plugin:import/recommended"
+      "react-app"
     ],
     "env": {
       "node": true,
