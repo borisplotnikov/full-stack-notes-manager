@@ -126,6 +126,6 @@ const parseError = (error, errorInfo = null) => {
     return mergeErrorData(defaultValues, parseUnknownError(error));
 };
 
-parseError.stackTraceEnabled = process.env.NODE_ENV === 'development';
+parseError.stackTraceEnabled = import.meta.env.NODE_ENV === 'development';
 
 export default parseError;

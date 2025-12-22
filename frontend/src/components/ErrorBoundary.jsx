@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component {
             return (
                 <div className="error-fallback">
                   <h2>Something went wrong</h2>
-                  {process.env.NODE_ENV === 'development' && this.state.error && (
+                  {import.meta.env.NODE_ENV === 'development' && this.state.error && (
                     <pre>{this.state.error.toString()}</pre>
                   )}
                 </div>

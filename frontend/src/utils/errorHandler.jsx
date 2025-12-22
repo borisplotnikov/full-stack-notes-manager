@@ -7,7 +7,7 @@ function errorHandler(error, errorInfo = null) {
 
     alert(userMessage);
     
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.NODE_ENV === 'development') {
         console.error('Dev Error Details:', errorDetails);
     }
 }

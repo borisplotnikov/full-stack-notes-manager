@@ -3,25 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "10.4.0",
-    "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "14.3.0",
-    "@testing-library/user-event": "14.5.2",
-    "axios": "1.8.2",
-    "bootstrap": "5.3.3",
-    "fast-safe-stringify": "2.1.1",
-    "pluralize": "8.0.0",
-    "react": "18.0.0",
-    "react-bootstrap": "2.10.4",
-    "react-dom": "18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "2.1.4"
+    "axios": "^1.8.2",
+    "bootstrap": "^5.3.3",
+    "fast-safe-stringify": "^2.1.1",
+    "pluralize": "^8.0.0",
+    "react": "^19.2.3",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^19.2.3",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "preview"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.0"
   }
 }
