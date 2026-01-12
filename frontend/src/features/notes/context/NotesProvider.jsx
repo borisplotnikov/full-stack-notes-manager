@@ -1,88 +1,91 @@
-// /src/features/notes/context/NotesProvider.js
+// frontend > src > features > notes > context > NotesProvider.jsx
 
-import React, { useEffect, useState, useRef } from 'react';
-import NotesContext from '../context/NotesContext';
-import { useNoteActions } from '../hooks';
-import { useErrorHandler } from '../../../hooks';
-import { LOAD_TIMES } from '../../../constants';
+import { useEffect, useState, useRef } from 'react';
+// import NotesContext from '../context/NotesContext';
+// import { useNoteActions } from '../hooks';
+// import { useErrorHandler } from '../../../hooks';
+// import { LOAD_TIMES } from '../../../constants';
 import PropTypes from 'prop-types';
 
+const NotesProvider = () => {
+    return <p></p>
+}
 
-const NotesProvider = ({ children }) => {
-    const [notes, setNotes] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [isInitialized, setIsInitialized] = useState(false);
-    const [editingIds, setEditingIds] = useState([]);
+// const NotesProvider = ({ children }) => {
+//     const [notes, setNotes] = useState([]);
+//     const [loading, setLoading] = useState(true);
+//     const [isInitialized, setIsInitialized] = useState(false);
+//     const [editingIds, setEditingIds] = useState([]);
 
-    const handleError = useErrorHandler();
-    const { fetchNotes, addNote, updateNote, deleteNote } = useNoteActions(setNotes, setLoading);
+//     const handleError = useErrorHandler();
+//     const { fetchNotes, addNote, updateNote, deleteNote } = useNoteActions(setNotes, setLoading);
 
-    const inputRef = useRef(null);
-    const noteInputRefs = useRef({});
+//     const inputRef = useRef(null);
+//     const noteInputRefs = useRef({});
 
-    useEffect(() => {
+//     useEffect(() => {
 
-        const wait = (ms) => new Promise((res) => setTimeout(res, ms));
+//         const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 
-        const init = async () => {
-            const start = Date.now();
-            try {
-                await fetchNotes();
-            } catch (error) {
-                handleError(error)
-            }
+//         const init = async () => {
+//             const start = Date.now();
+//             try {
+//                 await fetchNotes();
+//             } catch (error) {
+//                 handleError(error)
+//             }
             
-            const elapsed = Date.now() - start;
-            const remaining = LOAD_TIMES.MIN_LOAD_TIME - elapsed;
-            if (remaining > 0) await wait(remaining);
+//             const elapsed = Date.now() - start;
+//             const remaining = LOAD_TIMES.MIN_LOAD_TIME - elapsed;
+//             if (remaining > 0) await wait(remaining);
             
-            setLoading(false);
-            setIsInitialized(true);
-        };
+//             setLoading(false);
+//             setIsInitialized(true);
+//         };
         
-        init();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+//         init();
+//         // eslint-disable-next-line react-hooks/exhaustive-deps
+//     }, []);
 
-    useEffect(() => {
-        if (editingIds.length === 0) {
-            inputRef.current?.focus();
-        } else {
-            const lastEditedId = editingIds.at(-1);
-            const lastTextarea = noteInputRefs.current[lastEditedId];
-            if (lastTextarea) {
-                lastTextarea.focus();
-                const length = lastTextarea.value.length;
-                lastTextarea.setSelectionRange(length, length);
-            }
-        }
-    }, [editingIds, notes.length]);
+    // useEffect(() => {
+    //     if (editingIds.length === 0) {
+    //         inputRef.current?.focus();
+    //     } else {
+    //         const lastEditedId = editingIds.at(-1);
+    //         const lastTextarea = noteInputRefs.current[lastEditedId];
+    //         if (lastTextarea) {
+    //             lastTextarea.focus();
+    //             const length = lastTextarea.value.length;
+    //             lastTextarea.setSelectionRange(length, length);
+    //         }
+    //     }
+    // }, [editingIds, notes.length]);
 
-    const contextValue = {
-        notes,
-        addNote,
-        updateNote,
-        deleteNote,
-        loading,
-        setLoading,
-        editingIds,
-        setEditingIds,
-        setNotes,
-        handleError,
-        inputRef,
-        noteInputRefs,
-        isInitialized,
-    };
+    // const contextValue = {
+    //     notes,
+    //     addNote,
+    //     updateNote,
+    //     deleteNote,
+    //     loading,
+    //     setLoading,
+    //     editingIds,
+    //     setEditingIds,
+    //     setNotes,
+    //     handleError,
+    //     inputRef,
+    //     noteInputRefs,
+    //     isInitialized,
+    // };
 
-    return (
-        <NotesContext.Provider value={contextValue}>
-            {children}
-        </NotesContext.Provider>
-    );
-};
+    // return (
+    //     <NotesContext.Provider value={contextValue}>
+    //         {children}
+    //     </NotesContext.Provider>
+    // );
+// };
 
-NotesProvider.propTypes = {
-    children: PropTypes.node.isRequired,
-};
+// NotesProvider.propTypes = {
+//     children: PropTypes.node.isRequired,
+// };
 
 export default NotesProvider;

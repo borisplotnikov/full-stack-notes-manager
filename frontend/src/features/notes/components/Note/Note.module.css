@@ -1,0 +1,17 @@
+/* frontend > src > features > notes > components > Note > Note.module.css */
+
+.note-button-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .note-button {
+    max-width: 25%;
+  }
+
+  .note-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }

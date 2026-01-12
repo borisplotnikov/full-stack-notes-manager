@@ -1,6 +1,6 @@
-// /src/providers/AppProviders.js
+// frontend > src > providers > AppProviders.jsx
 
-import NotesProvider from '../features/notes/context/NotesProvider';
+import NotesProvider from '../features/notes/context/NotesProvider.jsx';
 import PropTypes from 'prop-types';
 
 const AppProviders = ({ children }) => (
