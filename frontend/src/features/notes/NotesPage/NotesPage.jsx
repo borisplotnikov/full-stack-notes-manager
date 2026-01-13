@@ -3,7 +3,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import NoteCreator from '../components/NoteCreator/NoteCreator.jsx';
 import NotesGallery from '../components/NotesGallery/NotesGallery.jsx';
-// import AppLoader from '../../components/AppLoader';
+import AppLoader from '../../../components/AppLoader/AppLoader.jsx';
 // import { useNotes } from './context/NotesContext';
 import './NotesPage.module.css';
 
