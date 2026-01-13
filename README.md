@@ -8,7 +8,7 @@
 </p>
 
 
-Create, delete, and edit notes with a full-stack notes management application built with **React**, **Express**, **Node.js**, and **MongoDB**.
+Create, delete, and edit notes with a full-stack notes management application built with **React**, **Express**, **Node.js**, and **MongoDB**. ++
 
 It is organized as a monorepo using **Yarn Workspaces** and features clean architecture, standardized error handling, custom React hooks, and responsive styling with Bootstrap.
 
