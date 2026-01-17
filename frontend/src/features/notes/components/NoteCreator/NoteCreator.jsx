@@ -1,45 +1,44 @@
-// frontend > src > features > notes > components > NoteCreator > NoteCreator.jsx
+// frontend / src / features / notes / components / NoteCreator / NoteCreator.jsx
 
 import { Container, Form, Button, Spinner } from 'react-bootstrap';
-// import { useNoteContent } from '../hooks';
-// import { useNotes } from '../context/NotesContext';
-// import { LENGTHS } from '../../../constants';
+import { useNoteContent } from '../../hooks';
+import { useNotes } from '../../context/NotesContext';
+import { LENGTHS } from '../../../../constants';
 import CharacterCounter from '../../../../components/CharacterCounter/CharacterCounter.jsx';
 import styles from './NoteCreator.module.css';
 
 const NoteCreator = () => {
-//     const {
-//         addNote,
-//         loading,
-//         inputRef,
-//         handleError,
-//     } = useNotes();
+    const {
+        addNote,
+        loading,
+        inputRef,
+        handleError,
+    } = useNotes();
 
-    // const {
-    //     content,
-    //     setContent,
-    //     trimmedContent,
-    //     contentLength,
-    //     isValid,
-    //     isNearMaxLength,
-    //     onChange,
-    // } = useNoteContent('');
+    const {
+        content,
+        setContent,
+        trimmedContent,
+        contentLength,
+        isValid,
+        isNearMaxLength,
+        onChange,
+    } = useNoteContent('');
 
-    // const onSubmit = async (e) => {
-    //     e.preventDefault();       
-    //     try {
-    //         await addNote(trimmedContent);
-    //         setContent('');
-    //     } catch (error) {
-    //         handleError(error, 'Saving failed.');
-    //     };
-    // };
+    const onSubmit = async (e) => {
+        e.preventDefault();       
+        try {
+            await addNote(trimmedContent);
+            setContent('');
+        } catch (error) {
+            handleError(error, 'Saving failed.');
+        };
+    };
 
     return (
         <Container className="w-50 mx-auto my-4">
-            <h2>NoteCreator</h2>
             <CharacterCounter />
-            {/* <Form onSubmit={onSubmit} className='my-3' aria-busy={loading}>
+            <Form onSubmit={onSubmit} className='my-3' aria-busy={loading}>
                 <Form.Label htmlFor='note-content' visuallyHidden>
                     Add a new note
                 </Form.Label>
@@ -88,7 +87,7 @@ const NoteCreator = () => {
                         isNearMaxLength={isNearMaxLength}
                     />
                 </Form.Text>
-            </Form> */}
+            </Form>
         </Container>
 
     );

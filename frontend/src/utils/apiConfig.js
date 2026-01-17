@@ -1,8 +1,8 @@
-// frontend > src > utils > apiConfig.js
+// frontend / src / utils / apiConfig.js
 
-// import { ERROR_MESSAGES } from '../constants';
+import { ERROR_MESSAGES } from '../constants';
 
-export const getapiBaseUrl = () => {
+export const getApiBaseUrl = () => {
     const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     if (!apiBaseUrl) {

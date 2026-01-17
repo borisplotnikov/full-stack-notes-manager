@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "add": "^2.0.6",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "fast-safe-stringify": "^2.1.1",
     "pluralize": "^8.0.0",

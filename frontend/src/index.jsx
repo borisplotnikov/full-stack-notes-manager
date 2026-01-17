@@ -1,4 +1,4 @@
-// frontend > src > index.jsx
+// frontend / src / index.jsx
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -11,9 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-        {/* <AppProviders> */}
+        <AppProviders>
             <App />
-        {/* </AppProviders> */}
+        </AppProviders>
     </ErrorBoundary>
   </StrictMode>,
 );

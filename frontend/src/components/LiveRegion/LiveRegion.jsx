@@ -1,4 +1,4 @@
-// frontend > src > components > LiveRegion > LiveRegion.jsx
+// frontend / src / components / LiveRegion / LiveRegion.jsx
 
 import PropTypes from 'prop-types';
 import { STATUS_MESSAGES } from '../../constants';

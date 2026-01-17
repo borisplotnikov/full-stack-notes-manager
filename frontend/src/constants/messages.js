@@ -1,4 +1,4 @@
-// frontend > src > contants > messages.js
+// frontend / src / contants / messages.js
 
 export const ERROR_MESSAGES = {
     CONTEXT: {

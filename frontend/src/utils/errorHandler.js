@@ -1,4 +1,4 @@
-// frontend > src > utils > errorHandler.js
+// frontend / src / utils / errorHandler.js
 
 import parseError from './parseError.js';
 

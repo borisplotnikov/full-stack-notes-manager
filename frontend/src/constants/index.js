@@ -1,4 +1,4 @@
-// frontend > src > constants > index.js
+// frontend / src / constants / index.js
 
 export {
     ERROR_MESSAGES,

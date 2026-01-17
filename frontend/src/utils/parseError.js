@@ -1,4 +1,4 @@
-// frontend > src > utils > parseError.js
+// frontend / src / utils / parseError.js
 
 import safeStringify from 'fast-safe-stringify';
 

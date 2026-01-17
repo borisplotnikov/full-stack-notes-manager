@@ -1,4 +1,4 @@
-// frontend > src > components > AppLoader > AppLoader.jsx
+// frontend / src / components / AppLoader / AppLoader.jsx
 
 import Spinner from '../Spinner/Spinner.jsx';
 import { STATUS_MESSAGES } from '../../constants'

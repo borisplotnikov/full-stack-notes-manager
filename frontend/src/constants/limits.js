@@ -1,4 +1,4 @@
-// frontend > src > constants > limits.js
+// frontend / src / constants / limits.js
 
 const warningRange = 20;
 

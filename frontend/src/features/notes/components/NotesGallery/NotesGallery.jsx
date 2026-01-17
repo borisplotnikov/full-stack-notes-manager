@@ -1,43 +1,42 @@
-// frontend > src > features > notes > components >  NotesGallery >  NotesGallery.jsx
+// frontend / src / features / notes / components /  NotesGallery /  NotesGallery.jsx
 
 import { Container, Row, Col, Alert } from 'react-bootstrap';
-// import ErrorBoundary from '../../../components/ErrorBoundary';
-// import { EMPTY_STATE_MESSAGES } from '../../../constants';
+import ErrorBoundary from '../../../../components/ErrorBoundary.jsx';
+import { EMPTY_STATE_MESSAGES } from '../../../../constants';
 
-// import { useNotes } from '../context/NotesContext';
+import { useNotes } from '../../context/NotesContext';
 import Note from '../Note/Note.jsx';
 import styles from './NotesGallery.module.css';
 
 const NotesGallery = () => {
-    // const {
-    //     notes,
-    //     updateNote,
-    //     editingIds,
-    //     setEditingIds,
-    //     noteInputRefs,
-    // } = useNotes();
+    const {
+        notes,
+        updateNote,
+        editingIds,
+        setEditingIds,
+        noteInputRefs,
+    } = useNotes();
 
-    // const enterEditMode = (id) => {
-    //     setEditingIds(prev => (
-    //         prev.includes(id) ? prev: [...prev, id]
-    //     ));
-    // };
+    const enterEditMode = (id) => {
+        setEditingIds(prev => (
+            prev.includes(id) ? prev: [...prev, id]
+        ));
+    };
 
-    // const exitEditMode = (noteId) => {
-    //     setEditingIds(prev => prev.filter(id => id !== noteId));
-    //     delete noteInputRefs.current[noteId];
-    // };
+    const exitEditMode = (noteId) => {
+        setEditingIds(prev => prev.filter(id => id !== noteId));
+        delete noteInputRefs.current[noteId];
+    };
 
-    // const handleSave = (id, newContent) => {
-    //     updateNote(id, newContent);
-    //     exitEditMode(id);
-    // };
+    const handleSave = (id, newContent) => {
+        updateNote(id, newContent);
+        exitEditMode(id);
+    };
 
     return (
         <Container className="mt-4" aria-live="polite">
-            <h2>NotesGallery</h2>
             <Note />
-            {/* {notes.length > 0 ? (
+            {notes.length > 0 ? (
                 <Row className="g-3">
                     {notes.map(note => (
                         <Col key={note._id} xs={12} md={6} lg={4}>
@@ -60,7 +59,7 @@ const NotesGallery = () => {
                 </Row>
             ) : (
                 <Alert variant="info">{EMPTY_STATE_MESSAGES.NO_NOTES}</Alert>
-            )} */}
+            )}
         </Container>
     );
 };

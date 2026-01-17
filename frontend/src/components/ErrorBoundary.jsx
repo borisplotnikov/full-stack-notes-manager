@@ -1,4 +1,4 @@
-// frontend > src > components > ErrorBoundary.jsx
+// frontend / src / components / ErrorBoundary.jsx
 
 import React from 'react';
 import PropTypes from 'prop-types';

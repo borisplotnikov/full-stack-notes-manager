@@ -1,6 +1,6 @@
-// frontend > src > utils > validateNoteContent.js
+// frontend / src / utils / validateNoteContent.js
 
-// import { LENGTHS } from '../constants';
+import { LENGTHS } from '../constants';
 
 /**
  * Validates note content.
@@ -20,8 +20,8 @@ const validateNoteContent = (content, originalContent = '') => {
     const trimmedContent = content.trim();
     const contentLength = content.length;
 
-    // const isLengthValid =
-    //   contentLength >= LENGTHS.MIN && contentLength <=LENGTHS.MAX;
+    const isLengthValid =
+      contentLength >= LENGTHS.MIN && contentLength <=LENGTHS.MAX;
 
     const isUnchanged = originalContent !== undefined && content === originalContent;
     const isNearMaxLength = contentLength >= LENGTHS.WARNING_THRESHOLD;
