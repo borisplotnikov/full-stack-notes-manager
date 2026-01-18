@@ -17,13 +17,14 @@ import { LENGTHS } from '../constants';
  */
 
 const validateNoteContent = (content, originalContent = '') => {
-    const trimmedContent = content.trim();
-    const contentLength = content.length;
+    const safeContent = content || '';
+    const trimmedContent = safeContent.trim();
+    const contentLength = safeContent.length;
 
     const isLengthValid =
       contentLength >= LENGTHS.MIN && contentLength <=LENGTHS.MAX;
 
-    const isUnchanged = originalContent !== undefined && content === originalContent;
+    const isUnchanged = originalContent !== undefined && safeContent === originalContent;
     const isNearMaxLength = contentLength >= LENGTHS.WARNING_THRESHOLD;
 
     const isValid = isLengthValid && !isUnchanged;

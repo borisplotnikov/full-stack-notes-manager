@@ -88,7 +88,7 @@ const Note = ({
                         </>
                     ) : (
                         <>
-                            <Card.Text className={styles.note-text}>
+                            <Card.Text className={styles['note-text']}>
                                 {content}
                             </Card.Text>
                             <div className={`d-flex gap-2 ${['note-button-group']} mt-4`}>
