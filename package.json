@@ -7,7 +7,8 @@
     "backend"
   ],
   "scripts": {
-    "dev": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend dev\"",
+    "dev:full": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend dev\"",
+    "dev": "concurrently \"yarn workspace frontend dev\"",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "yarn workspace backend build && yarn workspace frontend build"
   },
